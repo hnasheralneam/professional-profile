@@ -15,3 +15,28 @@ function goToSection(page) {
    if (document.querySelector("span.active")) document.querySelector("span.active").classList.remove("active");
    indicator.classList.add("active")
 }
+
+
+
+// Hover
+let dynamHov;
+let theme = "light";
+setupDynamHov();
+
+function setupDynamHov() {
+   dynamHov = document.createElement("SPAN");
+   document.body.appendChild(dynamHov);
+   if (theme === "dark") { dynamHov.classList.add("dynamicHover"); }
+   else { dynamHov.classList.add("dynamicHoverDark"); }
+}
+
+function info(THIS) {
+   dynamHov.innerHTML = THIS.dataset.info;
+   dynamHov.style.opacity = "1";
+   THIS.onmouseleave = () => { dynamHov.style.opacity = "0"; }
+}
+
+document.addEventListener("mousemove", (event) => {
+   dynamHov.style.left = (event.clientX + 18) + "px";
+   dynamHov.style.top = (event.clientY - 5) + "px";
+});

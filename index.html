@@ -1,140 +1,208 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
-      <link rel="shortcut icon" href="assets/not_sure.jpg" type="image/x-icon"/>
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-      <script src="scripts/main.js" charset="utf-8" defer></script>
-      <link rel="stylesheet" href="styles/styles.css">
-      <title>⭐ Hamza Nasher-Alneam ⭐</title>
-   </head>
-   <body>
-      <!-- Move to different parts -->
-      <div class="progress-parent">
-         <div class="progress">
-            <span id="meetIndicator" onclick="goToSection('meet')"></span>
-            <span id="vegetable-dashIndicator" onclick="goToSection('vegetable-dash')"></span>
-            <span id="gold-rushIndicator" onclick="goToSection('gold-rush')"></span>
-            <span id="coming-soonIndicator" onclick="goToSection('coming-soon')"></span>
+
+<head>
+   <meta charset="utf-8">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet">
+   <link rel="shortcut icon" href="assets/not_sure.jpg" type="image/x-icon" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <script src="scripts/main.js" charset="utf-8" defer></script>
+   <link rel="stylesheet" href="styles/styles.css">
+   <title>⭐ Hamza Nasher-Alneam ⭐</title>
+</head>
+
+<body>
+   <!-- Move to different parts -->
+   <div class="progress-parent">
+      <div class="progress">
+         <span onmouseover="info(this)" data-info="About" id="meetIndicator" onclick="goToSection('meet')"></span>
+         <span onmouseover="info(this)" data-info="Leadership" id="leadershipIndicator"
+            onclick="goToSection('leadership')"></span>
+         <span onmouseover="info(this)" data-info="Skills" id="skillsIndicator" onclick="goToSection('skills')"></span>
+         <span onmouseover="info(this)" data-info="Clubs" id="clubsIndicator" onclick="goToSection('clubs')"></span>
+         <span onmouseover="info(this)" data-info="Achievements" id="achievementsIndicator"
+            onclick="goToSection('achievements')"></span>
+         <span onmouseover="info(this)" data-info="Work" id="workIndicator" onclick="goToSection('work')"></span>
+         <span onmouseover="info(this)" data-info="Volunteering" id="volunteeringIndicator"
+            onclick="goToSection('volunteering')"></span>
+         <span onmouseover="info(this)" data-info="Contact" id="contactIndicator"
+            onclick="goToSection('contact')"></span>
+      </div>
+   </div>
+
+   <!-- Landing -->
+   <div class="block landing" id="meet">
+      <div class="section-head">
+         <h1 class="hi">
+            I'm Hamza Nasher-Alneam
+         </h1>
+      </div>
+      <div class="section-text">
+         <div class="about-me">
+            <h1>About me</h1>
+            <p>I'm a high school student in the United States with a passion for learning and an interest in programming
+               and computer systems.</p>
          </div>
       </div>
+   </div>
 
-      <!-- Landing -->
-      <div class="block landing" id="meet">
-         <div class="section-head">
+   <!-- Leadership -->
+   <div class="block" id="leadership">
+      <div class="section-text">
+         <div class="about-me">
+            <h1>Leadership</h1>
+            <p>I co-founded the Game Dev Club with some friends at school to create a space at my school for people
+               interested in
+               computers and software development. It is also an officially registered <a
+                  href="https://hackclub.com/">Hack Club</a>, which gives the club support and
+               opportunities. In the first year, we already have 9 members who meet weekly both inside and outside of school to show off their work and give presentations about topics like creating engaging games and versioning code with Git.</p>
+         </div>
+      </div>
+      <div class="section-head">
+         <div>
             <h1 class="hi">
-               I'm Hamza Nasher-Alneam
+               Leadership
             </h1>
-         </div>
-         <div class="section-text">
-            <div class="about-me">
-               <h1>About me</h1>
-               <p>I'm a high school student in the United States. When I have time, I like to do programming, which has been mostly full
-               stack web dev. Now, I'm learning Kotlin for Android development, trying out Godot for the school Game Dev Club, and
-               writing C++ code for the school robotics team. Currently using the Fedora KDE Spin.</p>
-            </div>
+            <!-- <img class="section-image" src="https://broadneckrobotics.github.io/images/2023-2024/working.jpg"
+               alt="Robotics image"> -->
          </div>
       </div>
+   </div>
 
-      <!-- Vegetable Dash -->
-      <div class="block" id="vegetable-dash">
-         <div class="section-text">
-            <div class="about-me">
-               <h1>Broadneck Robotics</h1>
-               <p>Vex robotics! I've done some of that. I've written code and other things about whatever</p>
-            </div>
-         </div>
-         <div class="section-head">
-            <div>
-               <h1 class="hi">
-                  Robotics
-               </h1>
-               <img class="section-image" src="https://broadneckrobotics.github.io/images/2023-2024/working.jpg" alt="Robotics image">
-            </div>
-         </div>
-      </div>
-
-      <!-- Game dev club -->
-      <div class="block" id="gold-rush">
-         <div class="section-head">
-            <div>
-               <h1 class="hi">
-                  Game Dev Club
-               </h1>
-               <img class="section-image" src="https://hnasheralneam.github.io/gamedevclub/assets/title-box.png" alt="Game Dev Club logo">
-            </div>
-         </div>
-         <div class="section-text">
-            <div class="about-me">
-               <h1>Game Dev Club</h1>
-               <p>Godot! and no more unity. Gdscipt is basically python, ewwww we don't like python, none of us.</p>
-            </div>
-         </div>
-      </div>
-
-      <!-- Gold Rush -->
-      <div class="block" id="gold-rush">
-         <div class="text">
-            <br>
-            <h1>achievements</h1>
-            <p class="about-gold gold-text">About gold rush</p>
-         </div>
-      </div>
-
-      <!-- Coming soon -->
-      <div class="block" id="coming-soon">
-         <div class="section-head">
-            <div>
-               <h1 class="hi">
-                  Coming soon!
-               </h1>
-               <div>
-                  <br><br>
-                  <p>Email | <a href="mailto:hnasheralneam@gmail.com">hnasheralneam@gmail.com</a></p>
-                  <p>GitHub | <a href="https://github.com/hnasheralneam/">@hnasheralneam</a></p>
-                  <p>Developer website | <a href="https://hnasheralneam.github.io/">hnasheralneam.github.io</a></p>
-               </div>
-            </div>
-         </div>
-         <div class="section-text">
-            <div class="about-me">
-               <h1>You won't find me at</h1>
-               <p>Places you won't find me at</p>
-               <br>
-               <hr class="hr">
-               <br>
-               <div class="will-not-find-me-at">
-                  <a class="nothing-link" href="https://www.reddit.com/"><i class="fab fa-reddit"></i></a>
-                  <a class="nothing-link" href="https://www.twitch.tv/"><i class="fab fa-twitch"></i></a>
-                  <a class="nothing-link" href="https://dribbble.com/"><i class="fab fa-dribbble"></i></a>
-                  <a class="nothing-link" href="https://www.squarespace.com/"><i class="fab fa-squarespace"></i></a>
-               </div>
-               <h1>You will find me at</h1>
-               <p>Places you will find me at</p>
-               <br>
-               <hr class="hr">
-               <br>
-               <div class="will-not-find-me-at">
-                  <a class="nothing-link" href="https://github.com/hamza-314"><i class="fab fa-github"></i></a>
-                  <a class="nothing-link" href="https://stackoverflow.com/users/14818357/hamza"><i class="fab fa-stack-overflow"></i></a>
-                  <a class="nothing-link" href="https://codepen.io/hamza-314"><i class="fab fa-codepen"></i></a>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Coming Soon -->
-      <div class="block" id="coming-soon">
-         <div class="text">
-            <br><br>
-            <h1>
-               Coming soon
+   <!-- Skills -->
+   <div class="block" id="skills">
+      <div class="section-head">
+         <div>
+            <h1 class="hi">
+               Skills
             </h1>
-            <div>
-               words
+            <!-- <img class="section-image" src="https://hnasheralneam.github.io/gamedevclub/assets/title-box.png"
+               alt="Game Dev Club logo"> -->
+         </div>
+      </div>
+      <div class="section-text">
+         <div class="about-me">
+            <h1>Skills</h1>
+            <p>I have worked primarily with JavaScript and Node.js to create full-stack web apps, but I am also
+               comfortable in several other languages, including Python and Java. I use Linux for my daily work, but also use OpenSuse on a server.</p>
+         </div>
+      </div>
+   </div>
+
+   <!-- Clubs -->
+   <div class="block" id="clubs">
+      <div class="section-text">
+         <div class="about-me">
+            <h1>Clubs</h1>
+            <p>I am a member of the Broadneck Robotics Club, where I write code for my team and help other teams with code. Throughout the 2023-2024 season, we participated in multiple local competitions, learning from our losses to improve our robot. Our efforts paid off near the end of the season, when we made it into the VEX Robotics state competition.</p>
+         </div>
+      </div>
+      <div class="section-head">
+         <div>
+            <h1 class="hi">
+               Clubs
+            </h1>
+            <!-- <img class="section-image" src="https://broadneckrobotics.github.io/images/2023-2024/working.jpg"
+               alt="Robotics image"> -->
+         </div>
+      </div>
+   </div>
+
+   <!-- Achievements -->
+   <div class="block" id="achievements">
+      <div class="section-head">
+         <div>
+            <h1 class="hi">
+               Achievements
+            </h1>
+            <!-- <img class="section-image" src="https://hnasheralneam.github.io/gamedevclub/assets/title-box.png"
+               alt="Game Dev Club logo"> -->
+         </div>
+      </div>
+      <div class="section-text">
+         <div class="about-me">
+            <h1>Achievements</h1>
+            <p>In 2023, a friend and I competed in the <a href="https://magicinc.org/announcing-winners-of-ctf-14">MAGIC CTF cybersecurity competition</a>, facing off against teenage programmers from across the country, and winning third place.<p>
+            <p>In February of 2024, a friend and I competed in the STEP challenge by MAGIC, creating and developing a
+               developer profile application, which won the technology and best overall awards for 500 dollars.</p>
+         </div>
+      </div>
+   </div>
+
+   <!-- Work -->
+   <div class="block" id="work">
+      <div class="section-text">
+         <div class="about-me">
+            <h1>Work</h1>
+            <p>I've created multiple open source projects, which, while not actively maintained, have taught me a lot of
+               programming
+               skills, as well as how to create and manage a project.</p>
+         </div>
+      </div>
+      <div class="section-head">
+         <div>
+            <h1 class="hi">
+               Work
+            </h1>
+            <!-- <img class="section-image" src="https://broadneckrobotics.github.io/images/2023-2024/working.jpg"
+               alt="Robotics image"> -->
+         </div>
+      </div>
+   </div>
+
+   <!-- Volunteering -->
+   <div class="block" id="volunteering">
+      <div class="section-head">
+         <div>
+            <h1 class="hi">
+               Volunteering
+            </h1>
+            <!-- <img class="section-image" src="https://broadneckrobotics.github.io/images/2023-2024/working.jpg"
+                     alt="Robotics image"> -->
+         </div>
+      </div>
+      <div class="section-text">
+         <div class="about-me">
+            <h1>Volunteering</h1>
+            <p>Throughout my 9th grade summer, I volunteered at <a href="https://www.ecoffshoots.org/">ECO City
+                  Farms</a>, a nonprofit farm in Prince George's County that sells affordable fresh vegetables in food
+               deserts.</p>
+         </div>
+      </div>
+   </div>
+
+
+
+
+   <!-- Contact -->
+   <div class="block" id="contact">
+      <div class="section-text">
+         <div class="about-me">
+            <h1>You can find me at</h1>
+            <div class="will-not-find-me-at">
+               <a class="nothing-link" href="https://github.com/hnasheralneam"><i class="fa-brands fa-github"></i></a>
+               <a class="nothing-link" href="mailto:hnasheralneam@gmail.com"><i class="fa-brands fa-google"></i></a>
+               <a class="nothing-link" href="http://hnasheralneam.onthewifi.com:3000"><i
+                     class="fa-solid fa-code-branch"></i></a>
             </div>
          </div>
       </div>
-   </body>
+      <div class="section-head">
+         <div>
+            <h1 class="hi">
+               Contact!
+            </h1>
+            <div class="contact">
+               <p>Email | <a class="fancy-underline" href="mailto:hnasheralneam@gmail.com">hnasheralneam@gmail.com</a></p>
+               <p>GitHub | <a class="fancy-underline" href="https://github.com/hnasheralneam/">@hnasheralneam</a></p>
+               <p>Developer website | <a class="fancy-underline" href="https://hnasheralneam.github.io/">hnasheralneam.github.io</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+</body>
+
 </html>
