@@ -1,0 +1,252 @@
+/*==================================================
+Main
+==================================================*/
+
+body, html {
+   overflow: hidden;
+   scroll-behavior: smooth;
+}
+
+
+/*==================================================
+Common Classes
+==================================================*/
+
+.block {
+   height: 100vh;
+   background-color: #f5f5f5;
+   display: grid;
+   grid-template-columns: 50% 50%;
+}
+
+.block:nth-child(2n) {
+   background-color: #fff;
+}
+
+.section-head {
+   background-color: #f5f5f5;
+}
+
+.section-head,
+.section-text {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.section-text {
+   height: 100vh;
+   overflow: scroll;
+   background-color: #fff;
+   text-align: center;
+   font-family: Nunito;
+}
+
+
+/*==================================================
+Progress
+==================================================*/
+
+.progress-parent {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-left: 10px;
+   z-index: 100;
+}
+
+.progress {
+   background-color: #e4e4e4;
+   border-radius: 14px;
+   list-style-type: none;
+   padding: 0 8px;
+}
+
+.progress span {
+   display: block;
+   position: relative;
+   height: 25px;
+   width: 25px;
+   border-radius: 50%;
+   background-color: #fff;
+   color: #f9f9f9;
+   margin: 9px 0;
+   transition: 0.1s;
+   box-shadow: inset 1px 1px 5px #ddd,
+               0 0 1px #bbb;
+}
+
+.progress span.active {
+   background-color: #262626;
+}
+
+.progress span:hover { transform: scale(1.2); }
+
+
+/*==================================================
+Landing
+==================================================*/
+
+/* Hi Animation */
+
+.hi {
+   padding: 50px;
+   font-size: 250%;
+   display: inline-block;
+   transition: all .3s;
+   transition-delay: .3s;
+   margin: 0 auto;
+}
+
+.block:hover .hi {
+   color: #f9f9f9;
+   font-size: 280%;
+   background-color: #262626;
+   border-radius: 2%;
+}
+
+.hi:before, .hi:after {
+   content: "";
+   position: absolute;
+   height: 50px;
+   width: 50px;
+   background-color: #262626;
+   border-radius: 50%;
+   transition: all 0.3s;
+   opacity: 0;
+}
+
+.hi:before { left: -50px; }
+.hi:after { right: -50px; }
+
+.block:hover .hi:before {
+   left: 50%;
+   transform: scale(1.5);
+   animation: hi-opacity .6s 1 forwards;
+}
+
+.block:hover .hi:after {
+   right: 50%;
+   transform: scale(1.5);
+   animation: hi-opacity .6s 1 forwards;
+}
+
+@keyframes hi-opacity {
+   0% { opacity: 0; }
+   50% { opacity: 1; }
+   100% { opacity: 0; }
+}
+
+
+.section-head div {
+   display: grid;
+   justify-content: center;
+}
+
+.section-image {
+   display: block;
+   object-fit: cover;
+   width: 400px;
+   height: 400px;
+   border-radius: 10px;
+}
+
+/* About Me */
+
+.about-me {
+   display: block;
+   text-align: left;
+   margin: 0 80px;
+   font-size: 120%;
+   transform: translateY(-50px);
+   opacity: 0;
+   transition: all 1.5s;
+   transition-delay: .6s;
+}
+
+body:hover .about-me {
+   transform: translateY(2px);
+   opacity: 1;
+}
+
+
+
+/*==========================================================
+Links
+==========================================================*/
+
+a {
+   color: lightblue;
+   text-decoration: none;
+   position: relative;
+}
+
+.no-link:after {
+   display: none;
+}
+
+a:after {
+   content: "";
+   display: block;
+   height: 1.5px;
+   left: 50%;
+   position: absolute;
+   background: lightblue;
+   transition: all .5s;
+   width: 0;
+}
+
+a:hover:after {
+   width: 100%;
+   left: 0;
+}
+
+
+/*==================================================
+Personal
+==================================================*/
+
+.will-not-find-me-at { font-family: Nunito; }
+.find-me { margin: 50px 50px 0 50px; }
+
+.nothing-link:after { display: none; }
+
+.will-not-find-me-at {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   flex-wrap: wrap;
+   margin: auto;
+}
+
+.will-not-find-me-at a {
+   width: 90px;
+   height: 90px;
+   background-color: #f1f1f1;
+   margin: 10px;
+   border-radius: 30%;
+   color: #10ac84;
+   box-shadow: 0 5px 15px -5px #00000070;
+   position: relative;
+   overflow: hidden;
+   transition: all 0.2s;
+}
+
+i {
+   line-height: 90px;
+   font-size: 25px;
+   transition: all 0.2s;
+   margin-top: 35%;
+}
+
+.will-not-find-me-at a:hover i {
+   transform: scale(1.5) rotate(360deg);
+   color: whitesmoke;
+}
+
+.will-not-find-me-at a:hover { background-color: #262626; }
