@@ -53,6 +53,7 @@ Common Classes
 .section-text p {
    padding: .5rem 0;
    text-indent: 1.5rem;
+   max-width: 650px;
 }
 
 .image-background {
@@ -361,6 +362,7 @@ ul {
 li {
    margin: 1rem 0;
    padding-left: .75rem;
+   max-width: 650px;
 }
 
 .date {
