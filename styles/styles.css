@@ -125,39 +125,51 @@ Progress
 }
 
 .progress {
-   background-color: #f2f2f2;
-   border-radius: 1em 1em 0 0;
+   display: flex;
    list-style-type: none;
-   padding: 6px 8px 2px 8px;
-   transform: translate(0, 10px);
+   padding: 0;
    transition: .1s;
-   border: solid .075rem #ddd;
 }
 
-.progress-parent:hover .progress {
-   transform: translate(0, 0);
-   border-radius: 1em;
-}
-
-.progress span {
-   display: inline-block;
-   position: relative;
-   height: 1.6rem;
-   width: 1.6rem;
+.progress .dot {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   height: 2.3rem;
+   width: 2.3rem;
+   font-size: .5rem;
    border-radius: 50%;
    background-color: #fff;
    color: #f9f9f9;
-   transition: 0.1s;
-   border: solid .075rem #ccc;
-   margin: 0 .05em;
+   transition: 0.15s;
+   border: solid .11rem #ccc;
+   margin: 0 .35em;
+   overflow: hidden;
+   align-self: flex-end;
+   box-sizing: border-box;
+   padding: 1.1rem;
 }
 
-.progress span.active {
-   background-color: #262626;
+.progress .dot span {
+   color: #666;
+   background-color: transparent;
 }
 
-.progress span:hover {
-   transform: scale(1.2);
+.progress .dot.active {
+   background-color: #ddd;
+   color: #000;
+}
+
+.progress .dot.active span {
+   color: #222;
+}
+
+.progress .dot:hover {
+   height: 3rem;
+   width: 3rem;
+   font-size: .75rem;
+   margin: 0;
+   border-width: .15rem;
 }
 
 
@@ -329,7 +341,7 @@ Hover
    padding: .3vh .6vw;
    font-family: "Nunito";
    border-radius: .8vh;
-   font-size: 2.2vh;
+   font-size: 1.2rem;
    transition: opacity .1s;
    opacity: 0;
 }
@@ -400,18 +412,21 @@ Dark
       opacity: 1;
    }
 
-   .progress {
-      background-color: #333;
+   .progress .dot {
+      background-color: #444;
       border-color: #666;
    }
 
-   .progress span {
-      background-color: #222;
-      border-color: #666;
+   .progress .dot span {
+      color: #bbb;
    }
 
-   .progress span.active {
-      background-color: #ccc;
+   .progress .dot.active {
+      background-color: #111;
+   }
+
+   .progress .dot.active span {
+      color: #ddd;
    }
 
    .will-not-find-me-at a {
@@ -437,18 +452,20 @@ Mobile
    .block {
       grid-template-columns: 100%;
       grid-template-rows: auto auto;
-      height: 90vh;
+      height: 100vh;
    }
 
    .section-head {
-      height: 20vh;
-      overflow: scroll;
+      height: 30vh;
+      overflow: auto;
    }
 
    .section-text {
       height: 70vh;
-      overflow: scroll;
+      overflow: auto;
       font-size: 105%;
+      padding-top: 10rem;
+      padding-bottom: 5rem;
    }
 
    .section-text .about-me {
@@ -477,24 +494,23 @@ Mobile
       all: unset;
    }
 
+   .progress-parent {
+      padding: 0;
+      margin: 0;
+   }
+
    .progress {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 5px 0;
+   }
+
+   .progress .dot {
+      height: 3.4rem;
+      width: 3.4rem;
       border-radius: 0;
-   }
-
-   .progress span {
-      height: 50px;
-      width: 50px;
-      margin: 0 .1em;
-      border-radius: .5em;
-   }
-
-   .progress-parent:hover .progress {
-      transform: translate(0, 10px);
+      margin: 0;
    }
 
    .about-me {
